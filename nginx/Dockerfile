@@ -1,9 +1,8 @@
 FROM ubuntu:12.04
 MAINTAINER ragesh@rageshkrishna.com
 
-
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise universe restricted multiverse" >> /etc/apt/sources.list && \
-    apt-get install -y python-software-properties software-properties-common
+RUN apt-get update
+RUN apt-get install -y python-software-properties software-properties-common
 RUN apt-add-repository -y ppa:nginx/stable && apt-get update
 RUN apt-get update
 RUN apt-get install -y nginx

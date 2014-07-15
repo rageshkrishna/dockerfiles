@@ -6,7 +6,7 @@ RUN sudo apt-get install -y python-pip
 RUN pip install pika
 
 RUN mkdir /certs
-ADD ca.pem /certs/ca.pem
+ADD cacert.pem /certs/cacert.pem
 
 RUN mkdir /client
 ADD async_consumer.py /client/async_consumer.py

@@ -340,8 +340,8 @@ class ExampleConsumer(object):
 def main():
     logging.basicConfig(level=logging.INFO, format=LOG_FORMAT)
     server_container_addr = os.environ["MQ_PORT_5671_TCP_ADDR"]
-    ssl_options = urllib.urlencode({'ssl_options': { 'ca_certs': '/certs/ca.pem' } })
-    example = ExampleConsumer('amqps://guest:guest@{0}:5671/%2F?{1}'.format(server_container_addr, ssl_options))
+    #ssl_options = urllib.urlencode({'ssl_options': { 'ca_certs': '/certs/cacert.pem' } })
+    example = ExampleConsumer('amqps://guest:guest@{0}:5671/%2F'.format(server_container_addr))
     try:
         example.run()
     except KeyboardInterrupt:

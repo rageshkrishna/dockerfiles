@@ -11,7 +11,7 @@ docker run -d -name sslmq ragesh/rabbitmq-server
 ````
 
 ## Client
-The `client` folder contains a sample python asynchronous consumer that connects to RabbitMq running in a linked container named `mq`. It connects using `amqps` and explicitly trusts the self-signed server certificate.
+The `client` folder contains a sample python asynchronous consumer that connects to RabbitMq running in a linked container named `mq`. It connects using `amqps`.
 
 To build and run the client:
 ````
